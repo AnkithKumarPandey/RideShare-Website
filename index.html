@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RideShare - Share Your Ride & Save</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>RideShare</h1>
+        <nav>
+            <ul>
+                <li><a href="#post-ride">Post a Ride</a></li>
+                <li><a href="#search-ride">Find a Ride</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Post a Ride Section -->
+        <section id="post-ride" class="card">
+            <h2><img src="image.png" alt="RideShare Logo" style="width:50px; vertical-align: middle;">Post a Ride</h2>
+            <form id="post-ride-form">
+                <label for="start-location">Starting Location:</label>
+                <input type="text" id="start-location" required placeholder="Enter starting location">
+
+                <label for="end-location">Destination:</label>
+                <input type="text" id="end-location" required placeholder="Enter destination">
+
+                <label for="date">Date & Time:</label>
+                <input type="datetime-local" id="date" required>
+
+                <label for="price">Price:</label>
+                <input type="number" id="price" required placeholder="Total ride cost">
+
+                <label for="phone-number">Phone Number:</label>
+                <input type="tel" id="phone-number" required placeholder="Enter phone number">
+
+                <button type="submit">Post Ride</button>
+            </form>
+        </section>
+        
+        <!-- Search for Ride Section -->
+        <section id="search-ride" class="card">
+            <h2><img src="image.png" alt="RideShare Logo" style="width:50px; vertical-align: middle;">Find a Ride</h2>
+            <form id="search-ride-form">
+                <label for="search-location">Your Location:</label>
+                <input type="text" id="search-location" required placeholder="Enter your current location">
+
+                <label for="search-destination">Destination:</label>
+                <input type="text" id="search-destination" required placeholder="Enter destination">
+
+                <button type="submit">Search Rides</button>
+            </form>
+
+            <div id="available-rides">
+                <h3><img src="image.png" alt="RideShare Logo" style="width:50px; vertical-align: middle;">Available Rides:</h3>
+                <ul id="rides-list">
+                    <!-- Rides will be dynamically added here -->
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p><img src="image.png" alt="RideShare Logo" style="width:50px; vertical-align: middle;">&copy; 2024 RideShare - Your Route to Shared Rides!</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
